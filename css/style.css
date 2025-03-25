@@ -186,7 +186,7 @@ img {
 }
 
 .preco-item {
-    flex: 1;
+    flex: 1 1 260px;
     border: 4px solid white;
     padding: 20px;
     margin: 10px;
@@ -239,4 +239,76 @@ img {
     border-radius: 50%;
 }
 
-/** Aula 3-8 | 10:34 */
+.preco-item a {
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.25em;
+    padding: 15px 0;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .preco {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .preco .preco-item:nth-child(3) {
+        order: -2;
+    }
+
+    .preco .preco-item:nth-child(2) {
+        order: -1;
+    }
+}
+
+/** Qualidade */
+
+.qualidade {
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item {
+    flex: 1 1 300px;
+    margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.qualidade-item:nth-of-type(3n+1) h2::before {
+    background: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before {
+    background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before {
+    background: #66d9eb;
+}
+
+.qualidade-item p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
+}
